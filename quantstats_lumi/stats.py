@@ -113,6 +113,14 @@ def rolling_return(returns, rolling_period=252, prepare_returns=True):
     return returns.rolling(rolling_period).sum()
 
 
+def rolling_return(returns, rolling_period=252, prepare_returns=True):
+    """Return rolling return for specified period"""
+    if prepare_returns:
+        returns = _utils._prepare_returns(returns, rolling_period)
+
+    return returns.rolling(rolling_period).sum()
+
+
 def geometric_mean(retruns, aggregate=None, compounded=True):
     """Shorthand for expected_return()"""
     return expected_return(retruns, aggregate, compounded)
