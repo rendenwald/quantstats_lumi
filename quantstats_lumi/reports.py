@@ -1367,7 +1367,7 @@ def plots(
 
     benchmark_colname = kwargs.get("benchmark_title", "Benchmark")
     strategy_colname = kwargs.get("strategy_title", "Strategy")
-    active = kwargs.get("active", "False")
+    active = kwargs.get("active", False)
 
     if (
         isinstance(returns, _pd.DataFrame)
