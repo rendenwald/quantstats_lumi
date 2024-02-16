@@ -700,6 +700,9 @@ def plot_rolling_stats(
 
     ax.yaxis.set_major_formatter(_FormatStrFormatter("%.2f"))
 
+    if percent:
+        ax.yaxis.set_major_formatter(_FuncFormatter(format_pct_axis))
+
     ax.legend(fontsize=11)
 
     if benchmark is None and len(_pd.DataFrame(returns).columns) == 1:
