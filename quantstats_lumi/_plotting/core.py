@@ -620,6 +620,7 @@ def plot_rolling_stats(
         subtitle=True,
         savefig=None,
         show=True,
+        percent=False
 ):
     colors, _, _ = _get_colors(grayscale)
 
